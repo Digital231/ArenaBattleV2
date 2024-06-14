@@ -1,0 +1,80 @@
+.container {
+  padding: 20px;
+  background-color: #55564f;
+  border-radius: 8px;
+}
+
+.units-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.units,
+.inventory {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.unit,
+.inventory-item {
+  cursor: pointer;
+  user-select: none;
+  font-size: 20px;
+  padding: 5px;
+  border: 1px solid #ddd;
+  margin: 5px 0;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.unit.selected,
+.inventory-item:hover {
+  background-color: #e0e0e0;
+}
+
+.equipment-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.equipment {
+  display: grid;
+  grid-template-areas:
+    "head head head"
+    "mainhand body"
+    "offhand legs";
+  gap: 10px;
+}
+
+.slot {
+  cursor: pointer;
+  user-select: none;
+  font-size: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.slot.selected-slot {
+  border: 2px solid red;
+}
+
+.weapon-slots {
+  display: flex;
+  justify-content: space-between;
+}
+
+.weapon-slots .slot {
+  flex: 1;
+  margin: 0 5px;
+}
+
+.slot:hover {
+  background-color: #e0e0e0;
+}
